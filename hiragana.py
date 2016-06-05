@@ -1,10 +1,4 @@
 # coding=utf-8
-"""
-Usage:
-$ hiragana
-か？ <User enters in that character>
-(Correct! (1/1 100%) | Wrong! It was ka (0/1 0%)
-"""
 
 import random
 import logging
