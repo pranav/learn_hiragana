@@ -6,13 +6,21 @@ $ hiragana
 (Correct! (1/1 100%) | Wrong! It was ka (0/1 0%)
 """
 
+import random
 import logging
-
 import sys
-
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 
-import random
+
+class Colors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 HIRAGANA = [
     ('あ', 'a'),
@@ -104,6 +112,18 @@ HIRAGANA = [
 ]
 
 
+def ok(str):
+    logging.info(Colors.OKGREEN + str + Colors.ENDC)
+
+
+def fail(str):
+    logging.fatal(Colors.FAIL + str + Colors.ENDC)
+
+
+def warn(str):
+    logging.warn(Colors.WARNING + str + Colors.ENDC)
+
+
 def trial(choice):
     """
     Query the user for the hiragana tuple correctness.
@@ -120,7 +140,7 @@ def log_current_trial_info(successful_trials, failed_trials):
     :type failed_trials: list
     """
     total_trials = len(successful_trials) + len(failed_trials)
-    logging.info("%s/%s correct. %d" % (len(successful_trials), total_trials, int(len(successful_trials)*100/total_trials)))
+    logging.info("%s/%s correct. %d%%" % (len(successful_trials), total_trials, int(len(successful_trials)*100/total_trials)))
 
 
 def main():
@@ -132,19 +152,20 @@ def main():
     try:
         logging.info("Please enter in the matching hiragana.")
         while True:
+            logging.info(" ")
             choice = random.choice(HIRAGANA[0:max_hiragana])
             if trial(choice):
                 successful_trials.append(choice)
-                logging.info("໒( ͡ᵔ ▾ ͡ᵔ )७ Correct!")
+                ok("໒( ͡ᵔ ▾ ͡ᵔ )७ Correct!")
             else:
                 failed_trials.append(choice)
-                logging.info("(ಥ﹏ಥ) Wrong! It was %s." % choice[1])
+                fail("(ಥ﹏ಥ) Wrong! It was %s." % choice[1])
 
             log_current_trial_info(successful_trials, failed_trials)
     except KeyboardInterrupt:
-        logging.info("Goodbye!")
+        warn("Goodbye!")
         logging.info("You should learn these hiragana more!")
-        [logging.info("%s - %s" % choice) for choice in set(failed_trials)]
+        [warn("%s - %s" % choice) for choice in set(failed_trials)]
         sys.exit(0)
 
 
