@@ -9,8 +9,8 @@ Verbs
 | ききます | u | to listen |
 | いきます | u | to go
 | かえります | u | to return
-| います | irregular | to say |
-| いuます | irregular | to say |
+| います | formal irregular | to say |
+| いu | informal irregular | to say |
 | とります | u | to take |
 | わかります | u | to understand |
 | べんきょうします | formal irregular | to study |
