@@ -8,7 +8,7 @@ Verbs
 | よみます | u | to read |
 | ききます | u | to listen |
 | いきます | u | to go
-| かえります | ru | to return
+| かえります | u | to return
 | います | u | to say |
 | とります | u | to take |
 | わかります | u | to understand |
