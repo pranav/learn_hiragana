@@ -9,7 +9,7 @@ Verbs
 | ききます | u | to listen |
 | いきます | u | to go
 | かえります | u | to return
-| います | u | to say |
+| います | irregular | to say |
 | とります | u | to take |
 | わかります | u | to understand |
 | べんきょうします | formal irregular | to study |
