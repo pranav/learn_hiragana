@@ -18,110 +18,172 @@ class Colors:
     UNDERLINE = '\033[4m'
 
 
-HIRAGANA = [
-    ('あ', 'a'),
-    ('い', 'i'),
-    ('う', 'u'),
-    ('え', 'e'),
-    ('お', 'o'),
+KANA = {
+    'katakana': [
+        ('ア', 'a'),
+        ('イ', 'i'),
+        ('ウ', 'u'),
+        ('エ', 'e'),
+        ('オ', 'o'),
 
-    ('か', 'ka'),
-    ('き', 'ki'),
-    ('く', 'ku'),
-    ('け', 'ke'),
-    ('こ', 'ko'),
+        ('カ', 'ka'),
+        ('キ', 'ki'),
+        ('ク', 'ku'),
+        ('ケ', 'ke'),
+        ('コ', 'ko'),
 
-    ('さ', 'sa'),
-    ('し', 'shi'),
-    ('す', 'su'),
-    ('せ', 'se'),
-    ('そ', 'so'),
+        ('サ', 'sa'),
+        ('シ', 'shi'),
+        ('ス', 'su'),
+        ('セ', 'se'),
+        ('ソ', 'so'),
 
-    ('た', 'ta'),
-    ('ち', 'chi'),
-    ('つ', 'tsu'),
-    ('て', 'te'),
-    ('と', 'to'),
+        ('タ', 'ta'),
+        ('チ', 'chi'),
+        ('ツ', 'tsu'),
+        ('テ', 'te'),
+        ('ト', 'to'),
 
-    ('な', 'na'),
-    ('に', 'ni'),
-    ('ぬ', 'nu'),
-    ('ね', 'ne'),
-    ('の', 'no'),
+        ('ナ', 'na'),
+        ('ニ', 'ni'),
+        ('ヌ', 'nu'),
+        ('ネ', 'ne'),
+        ('ノ', 'no'),
 
-    ('は', 'ha'),
-    ('ひ', 'hi'),
-    ('ふ', 'fu'),
-    ('へ', 'he'),
-    ('ほ', 'ho'),
+        ('ハ', 'ha'),
+        ('ヒ', 'hi'),
+        ('フ', 'fu'),
+        ('ヘ', 'he'),
+        ('ホ', 'ho'),
 
-    ('ま', 'ma'),
-    ('み', 'mi'),
-    ('む', 'mu'),
-    ('め', 'me'),
-    ('も', 'mo'),
+        ('マ', 'ma'),
+        ('ミ', 'mi'),
+        ('ム', 'mu'),
+        ('メ', 'me'),
+        ('モ', 'mo'),
 
-    ('や', 'ya'),
-    ('ゆ', 'yu'),
-    ('よ', 'yo'),
+        ('ヤ', 'ya'),
+        ('ユ', 'yu'),
+        ('ヨ', 'yo'),
 
-    ('ら', 'ra'),
-    ('り', 'ri'),
-    ('る', 'ru'),
-    ('れ', 're'),
-    ('ろ', 'ro'),
+        ('ラ', 'ra'),
+        ('リ', 'ri'),
+        ('ル', 'ru'),
+        ('レ', 're'),
+        ('ロ', 'ro'),
 
-    ('わ', 'wa'),
-    ('を', 'wo'),
+        ('ワ', 'wa'),
+        ('ヲ', 'wo'),
 
-    ('ん', 'n'),
+        ('ン', 'n')
+    ],
+    'hiragana': [
+        ('あ', 'a'),
+        ('い', 'i'),
+        ('う', 'u'),
+        ('え', 'e'),
+        ('お', 'o'),
 
-    ('が', 'ga'),
-    ('ぎ', 'gi'),
-    ('ぐ', 'gu'),
-    ('げ', 'ge'),
-    ('ご', 'go'),
+        ('か', 'ka'),
+        ('き', 'ki'),
+        ('く', 'ku'),
+        ('け', 'ke'),
+        ('こ', 'ko'),
 
-    ('ざ', 'za'),
-    ('じ', 'ji'),
-    ('ず', 'zu'),
-    ('ぜ', 'ze'),
-    ('ぞ', 'zo'),
+        ('さ', 'sa'),
+        ('し', 'shi'),
+        ('す', 'su'),
+        ('せ', 'se'),
+        ('そ', 'so'),
 
-    ('だ', 'da'),
-    ('づ', 'zu'),
-    ('で', 'de'),
-    ('ど', 'do'),
+        ('た', 'ta'),
+        ('ち', 'chi'),
+        ('つ', 'tsu'),
+        ('て', 'te'),
+        ('と', 'to'),
 
-    ('ば', 'ba'),
-    ('び', 'bi'),
-    ('ぶ', 'bu'),
-    ('べ', 'be'),
-    ('ぼ', 'bo'),
+        ('な', 'na'),
+        ('に', 'ni'),
+        ('ぬ', 'nu'),
+        ('ね', 'ne'),
+        ('の', 'no'),
+
+        ('は', 'ha'),
+        ('ひ', 'hi'),
+        ('ふ', 'fu'),
+        ('へ', 'he'),
+        ('ほ', 'ho'),
+
+        ('ま', 'ma'),
+        ('み', 'mi'),
+        ('む', 'mu'),
+        ('め', 'me'),
+        ('も', 'mo'),
+
+        ('や', 'ya'),
+        ('ゆ', 'yu'),
+        ('よ', 'yo'),
+
+        ('ら', 'ra'),
+        ('り', 'ri'),
+        ('る', 'ru'),
+        ('れ', 're'),
+        ('ろ', 'ro'),
+
+        ('わ', 'wa'),
+        ('を', 'wo'),
+
+        ('ん', 'n'),
+
+        ('が', 'ga'),
+        ('ぎ', 'gi'),
+        ('ぐ', 'gu'),
+        ('げ', 'ge'),
+        ('ご', 'go'),
+
+        ('ざ', 'za'),
+        ('じ', 'ji'),
+        ('ず', 'zu'),
+        ('ぜ', 'ze'),
+        ('ぞ', 'zo'),
+
+        ('だ', 'da'),
+        ('づ', 'zu'),
+        ('で', 'de'),
+        ('ど', 'do'),
+
+        ('ば', 'ba'),
+        ('び', 'bi'),
+        ('ぶ', 'bu'),
+        ('べ', 'be'),
+        ('ぼ', 'bo'),
 
 
-    ('ぱ', 'pa'),
-    ('ぴ', 'pi'),
-    ('ぷ', 'pu'),
-    ('ぺ', 'pe'),
-    ('ぽ', 'po')
-]
+        ('ぱ', 'pa'),
+        ('ぴ', 'pi'),
+        ('ぷ', 'pu'),
+        ('ぺ', 'pe'),
+        ('ぽ', 'po')
+    ]
+}
 
-def get_hiragana(starting, ending):
+
+def get_kana(kana, starting, ending):
     filtered_list = []
     found_starting = False
     found_ending = False
-    global HIRAGANA
-    for hiragana in HIRAGANA:
+    global KANA
+    for kana_item in KANA[kana]:
         if found_starting and found_ending:
             break
-        if hiragana[1] == starting:
+        if kana_item[1] == starting:
             found_starting = True
-        if hiragana[1] == ending:
+        if kana_item[1] == ending:
             found_ending = True
         if found_starting or found_ending:
-            filtered_list.append(hiragana)
+            filtered_list.append(kana_item)
     return filtered_list
+
 
 def ok(str):
     logging.info(Colors.OKGREEN + str + Colors.ENDC)
@@ -156,6 +218,7 @@ def log_current_trial_info(successful_trials, failed_trials):
 
 def parse_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument("kana")
     parser.add_argument("--starting", default="a", required=False, dest="starting", help="Hiragana to start with")
     parser.add_argument("--ending", default="po", required=False, dest="ending", help="Hiragana to end with")
     return parser.parse_args()
@@ -163,15 +226,18 @@ def parse_args():
 
 def main():
     args = parse_args()
-    logging.info("LEARN HIRAGANA!")
+    if args.kana not in ['hiragana', 'katakana']:
+        logging.error("Must choose one of hiragana or katakana!")
+
+    logging.info("LEARN KANA!")
     successful_trials = []
     failed_trials = []
-    hiragana_list = get_hiragana(args.starting, args.ending)
+    kana_list = get_kana(args.kana, args.starting, args.ending)
     try:
         logging.info("Please enter in the matching hiragana.")
         while True:
             logging.info(" ")
-            choice = random.choice(hiragana_list)
+            choice = random.choice(kana_list)
             if trial(choice):
                 successful_trials.append(choice)
                 ok("໒( ͡ᵔ ▾ ͡ᵔ )७ Correct!")
