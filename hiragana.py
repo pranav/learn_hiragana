@@ -203,7 +203,11 @@ def trial(choice):
     :type choice: tuple
     :return bool
     """
-    hiragana = raw_input("Please enter " + choice[0] + ": ")
+    if sys.version_info[0] > 2:
+        get_input = input
+    else:
+        get_input = raw_input
+    hiragana = get_input("Please enter " + choice[0] + ": ")
     return hiragana == choice[0]
 
 
